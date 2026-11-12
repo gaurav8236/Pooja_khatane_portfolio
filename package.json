@@ -1,0 +1,10 @@
+{
+  "name": "pooja-khatane-case-files-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Forensic Risk Investigator Portfolio — Pooja Khatane (London, UK)",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  }
+}

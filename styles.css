@@ -1,0 +1,291 @@
+:root {
+      --bg-noir: #110c09;
+      --bg-cork: #1b130d;
+      --crimson: #a91d22;
+      --crimson-bright: #c82329;
+      --parchment-light: #dfd0b8;
+      --parchment-mid: #d3bfa0;
+      --parchment-dark: #bfa582;
+      --ink-dark: #1e1610;
+      --ink-muted: #3d2f24;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--bg-noir);
+      color: #f5efe6;
+      font-family: 'Courier Prime', monospace;
+      overflow-x: hidden;
+    }
+
+    .font-serif-display {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    .font-typewriter {
+      font-family: 'Special Elite', 'Courier Prime', monospace;
+    }
+
+    .font-courier {
+      font-family: 'Courier Prime', monospace;
+    }
+
+    .font-hud {
+      font-family: 'Share Tech Mono', monospace;
+      letter-spacing: 0.18em;
+    }
+
+    /* Dark detective corkboard & mahogany desk textures */
+    .corkboard-surface {
+      background-color: #120d0a;
+      background-image:
+        radial-gradient(circle at 20% 25%, rgba(169, 29, 34, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 80% 70%, rgba(196, 148, 88, 0.07) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(18, 13, 10, 0.2) 0%, rgba(8, 5, 4, 0.92) 100%),
+        repeating-radial-gradient(circle at 17% 32%, rgba(255, 225, 185, 0.025) 0px, rgba(0, 0, 0, 0.06) 2px, transparent 4px);
+    }
+
+    .mahogany-desk {
+      background-color: #140d09;
+      background-image:
+        radial-gradient(ellipse at 18% 10%, rgba(255, 214, 153, 0.16) 0%, transparent 42%),
+        radial-gradient(ellipse at 50% 50%, rgba(42, 27, 18, 0.45) 0%, rgba(10, 7, 5, 0.96) 100%),
+        repeating-linear-gradient(168deg, rgba(255, 255, 255, 0.012) 0px, rgba(255, 255, 255, 0.012) 2px, transparent 2px, transparent 9px);
+    }
+
+    /* Open Two-Page Dossier Spread */
+    .dossier-wrapper {
+      position: relative;
+      background: #473321;
+      padding: 14px;
+      border-radius: 6px;
+      box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.85),
+        0 0 0 1px rgba(255, 220, 175, 0.12),
+        inset 0 0 24px rgba(0, 0, 0, 0.75);
+      transform: rotate(-0.6deg);
+    }
+
+    .dossier-book {
+      position: relative;
+      background:
+        linear-gradient(90deg,
+          #d7c4a5 0%,
+          #e2d2b9 44%,
+          #cbb492 48.8%,
+          #8c7355 49.8%,
+          #6b543b 50%,
+          #9e8464 50.4%,
+          #cab28f 51.5%,
+          #dccab0 56%,
+          #d2be9f 100%);
+      color: var(--ink-dark);
+      border-radius: 3px;
+      box-shadow:
+        inset 0 0 60px rgba(92, 63, 33, 0.35),
+        0 4px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    @media (max-width: 1023px) {
+      .dossier-wrapper {
+        transform: none;
+        padding: 8px;
+      }
+      .dossier-book {
+        background:
+          linear-gradient(180deg,
+            #dfd0b7 0%,
+            #d6c3a5 49%,
+            #8c7355 50%,
+            #dccab0 51%,
+            #d1bd9e 100%);
+      }
+    }
+
+    /* Crimson Tape Label */
+    .crimson-label {
+      display: inline-block;
+      background-color: var(--crimson);
+      color: #f9f3eb;
+      font-family: 'Courier Prime', monospace;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.78rem;
+      line-height: 1.2;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
+    }
+
+    /* Tag Pill */
+    .case-tag {
+      display: inline-flex;
+      align-items: center;
+      background-color: var(--crimson);
+      color: #f9f3eb;
+      font-family: 'Share Tech Mono', monospace;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.72rem;
+      font-size: 0.73rem;
+      border-radius: 1px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .case-tag:hover, .case-tag.active-tag {
+      background-color: #7f1216;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(169, 29, 34, 0.5);
+    }
+
+    /* Red Pushpin */
+    .pushpin {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #ff6b6b 0%, #c81e24 55%, #6e0b0f 100%);
+      box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.65),
+        inset 0 1px 2px rgba(255, 255, 255, 0.45);
+      display: inline-block;
+      position: relative;
+    }
+
+    .pushpin::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 4px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Small Bullet Pin inside Dossier */
+    .evidence-pin {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #ff5a5f 0%, #b91c1c 65%, #630d0f 100%);
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.45);
+      flex-shrink: 0;
+      margin-top: 0.42rem;
+    }
+
+    /* Polaroid Card */
+    .polaroid-card {
+      background: #efe6d5;
+      color: var(--ink-dark);
+      padding: 14px 14px 22px 14px;
+      box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.8),
+        0 0 0 1px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .polaroid-card:hover {
+      transform: translateY(-8px) rotate(0deg) scale(1.02) !important;
+      box-shadow:
+        0 28px 60px rgba(0, 0, 0, 0.92),
+        0 0 25px rgba(169, 29, 34, 0.4);
+      z-index: 20;
+    }
+
+    /* Rubber Stamp */
+    .rubber-stamp {
+      border: 2.5px solid rgba(139, 30, 30, 0.58);
+      color: rgba(139, 30, 30, 0.65);
+      font-family: 'Courier Prime', monospace;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      padding: 0.25rem 0.75rem;
+      text-transform: uppercase;
+      transform: rotate(7deg);
+      box-shadow: inset 0 0 6px rgba(139, 30, 30, 0.2);
+      user-select: none;
+    }
+
+    .case-open-stamp {
+      border: 3px solid rgba(185, 28, 28, 0.78);
+      color: rgba(200, 35, 41, 0.82);
+      font-family: 'Courier Prime', monospace;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      padding: 0.4rem 1.1rem;
+      text-transform: uppercase;
+      transform: rotate(-8deg);
+      box-shadow: 0 0 15px rgba(185, 28, 28, 0.25), inset 0 0 8px rgba(185, 28, 28, 0.25);
+    }
+
+    /* Framed Crimson CTA Button */
+    .dossier-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--crimson);
+      color: #f9f3eb;
+      font-family: 'Courier Prime', monospace;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 0.8rem 1.6rem;
+      border: 1px solid rgba(255, 230, 210, 0.35);
+      box-shadow:
+        0 0 0 4px var(--crimson),
+        0 10px 25px rgba(0, 0, 0, 0.65);
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .dossier-btn:hover {
+      background-color: var(--crimson-bright);
+      box-shadow:
+        0 0 0 4px var(--crimson-bright),
+        0 12px 30px rgba(169, 29, 34, 0.55);
+      transform: translateY(-1px);
+    }
+
+    /* Coffee Stain Ring SVG Overlay */
+    .coffee-stain {
+      pointer-events: none;
+      position: absolute;
+      bottom: 22px;
+      right: 34px;
+      width: 150px;
+      height: 150px;
+      opacity: 0.28;
+      mix-blend-mode: multiply;
+    }
+
+    /* Inspector Spotlight Lens Overlay */
+    #spotlightOverlay {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 45;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      background: radial-gradient(circle 220px at var(--mx, 50%) var(--my, 50%), rgba(255, 235, 190, 0.12) 0%, rgba(0, 0, 0, 0.62) 100%);
+    }
+
+    body.lens-active #spotlightOverlay {
+      opacity: 1;
+    }
+
+    /* Deck Mode hides non-active sections */
+    body.deck-mode .case-section {
+      display: none;
+    }
+    body.deck-mode .case-section.active-slide {
+      display: flex;
+      min-height: calc(100vh - 56px);
+    }

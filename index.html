@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pooja Khatane — Forensic Risk Investigator | Case Files Portfolio</title>
+  <meta name="description" content="Forensic Risk Investigator portfolio of Pooja Khatane (London, UK). Financial Crime, AML & KYC, Forensic Risk, and FCA Compliance Case Files." />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600;1,700&family=Share+Tech+Mono&family=Special+Elite&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="selection:bg-red-900 selection:text-amber-50">
+
+  <!-- Inspector Spotlight Lens Overlay -->
+  <div id="spotlightOverlay" aria-hidden="true"></div>
+
+  <!-- Top Forensic HUD Navigation Bar -->
+  <header class="sticky top-0 z-50 bg-[#0d0907]/95 backdrop-blur-md border-b border-amber-900/30 px-3 sm:px-6 py-2.5">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <!-- Brand / REC Status -->
+      <div class="flex items-center gap-3">
+        <a href="#section-01" onclick="navigateToSection(0, event)" class="flex items-center gap-2 text-xs font-hud text-amber-100/90 hover:text-white">
+          <span class="inline-block w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
+          <span>REC · CASE FILES · LONDON</span>
+        </a>
+        <span id="hudSlideIndicator" class="hidden sm:inline-block text-[11px] font-hud text-amber-200/60 border-l border-amber-800/40 pl-3">
+          FILE 01 / 07
+        </span>
+      </div>
+
+      <!-- Section Jump Links -->
+      <nav aria-label="Case File Sections" class="hidden lg:flex items-center gap-1 text-[11px] font-hud">
+        <button type="button" onclick="navigateToSection(0)" data-nav-idx="0" class="nav-pill px-2.5 py-1 rounded text-amber-100 bg-red-900/50 border border-red-700/50">01 SCENE</button>
+        <button type="button" onclick="navigateToSection(1)" data-nav-idx="1" class="nav-pill px-2.5 py-1 rounded text-amber-200/70 hover:text-amber-100 hover:bg-amber-950/40">02 PROFILE</button>
+        <button type="button" onclick="navigateToSection(2)" data-nav-idx="2" class="nav-pill px-2.5 py-1 rounded text-amber-200/70 hover:text-amber-100 hover:bg-amber-950/40">03 BOARD</button>
+        <button type="button" onclick="navigateToSection(3)" data-nav-idx="3" class="nav-pill px-2.5 py-1 rounded text-amber-200/70 hover:text-amber-100 hover:bg-amber-950/40">04 CASE 01</button>
+        <button type="button" onclick="navigateToSection(4)" data-nav-idx="4" class="nav-pill px-2.5 py-1 rounded text-amber-200/70 hover:text-amber-100 hover:bg-amber-950/40">05 CASE 02</button>
+        <button type="button" onclick="navigateToSection(5)" data-nav-idx="5" class="nav-pill px-2.5 py-1 rounded text-amber-200/70 hover:text-amber-100 hover:bg-amber-950/40">06 CASE 03</button>
+        <button type="button" onclick="navigateToSection(6)" data-nav-idx="6" class="nav-pill px-2.5 py-1 rounded text-amber-200/70 hover:text-amber-100 hover:bg-amber-950/40">07 CONTACT</button>
+      </nav>
+
+      <!-- Interactive Controls: View Mode, Lens, Prev/Next -->
+      <div class="flex items-center gap-2">
+        <button type="button" id="lensToggleBtn" onclick="toggleInspectorLens()" class="px-2.5 py-1 text-[11px] font-hud rounded border border-amber-700/40 text-amber-200/80 hover:text-white hover:border-amber-500/60 transition" title="Toggle Magnifying Glass Spotlight">
+          🔍 LENS: OFF
+        </button>
+        <button type="button" id="viewModeBtn" onclick="togglePresentationMode()" class="px-2.5 py-1 text-[11px] font-hud rounded border border-red-800/60 bg-red-950/40 text-amber-100 hover:bg-red-900/60 transition" title="Switch between Full Website Scroll and 7-Slide Deck Mode">
+          📑 MODE: SCROLL
+        </button>
+        <div id="deckNavControls" class="hidden items-center gap-1">
+          <button type="button" onclick="stepSlide(-1)" class="px-2 py-1 text-xs font-hud bg-amber-950/60 border border-amber-700/40 rounded text-amber-100 hover:bg-amber-900/60" aria-label="Previous Slide">←</button>
+          <button type="button" onclick="stepSlide(1)" class="px-2 py-1 text-xs font-hud bg-amber-950/60 border border-amber-700/40 rounded text-amber-100 hover:bg-amber-900/60" aria-label="Next Slide">→</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="portfolioMain">
+
+    <!-- =====================================================================
+         PAGE 01: THE CRIME SCENE (HERO)
+         ===================================================================== -->
+    <section id="section-01" data-section-index="0" class="case-section active-slide relative min-h-[92vh] corkboard-surface flex items-center overflow-hidden py-12 lg:py-16 border-b border-amber-950/40">
+      <!-- Left Ambient Crime Scene Evidence Strip (from PDF Page 1) -->
+      <img
+        src="./assets/crime_scene_left.jpg"
+        alt="Crime scene evidence board with Bank photograph, follow the money sticky note, £50 notes, and Do Not Cross tape"
+        class="hidden xl:block absolute left-0 top-0 h-full w-auto object-cover opacity-85 pointer-events-none select-none"
+      />
+
+      <!-- Subtle Red Investigator String SVG -->
+      <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-45" xmlns="http://www.w3.org/2000/svg">
+        <line x1="8%" y1="18%" x2="48%" y2="22%" stroke="#b91c1c" stroke-width="1.8" />
+        <line x1="48%" y1="22%" x2="78%" y2="34%" stroke="#b91c1c" stroke-width="1.8" />
+        <line x1="12%" y1="74%" x2="44%" y2="62%" stroke="#b91c1c" stroke-width="1.4" />
+      </svg>
+
+      <!-- Top-Right Page HUD -->
+      <div class="absolute top-5 right-6 z-20 flex items-center gap-2 text-xs font-hud text-amber-100/80">
+        <span>REC</span>
+        <span class="w-2 h-2 rounded-full bg-red-600 inline-block"></span>
+        <span>CASE FILES · LONDON</span>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto w-full px-6 sm:px-10 xl:pl-56 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <!-- Left/Center Hero Text & Pinned Note -->
+        <div class="lg:col-span-7 space-y-6">
+          <!-- Pinned Speech Card -->
+          <div class="relative inline-block sm:ml-48 lg:ml-56 mb-2 transform -rotate-2">
+            <span class="pushpin absolute -top-2.5 left-1/2 -translate-x-1/2 z-10"></span>
+            <div class="bg-[#efe7d6] text-[#1e1610] px-5 py-4 max-w-xs shadow-2xl border border-stone-400/50">
+              <p class="font-courier text-sm sm:text-base leading-snug">
+                “Good evening. You have arrived at the scene — do mind the evidence.”
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <span class="crimson-label">FORENSIC RISK INVESTIGATOR</span>
+          </div>
+
+          <h1 class="font-serif-display font-bold uppercase tracking-tight text-5xl sm:text-7xl xl:text-[5.4rem] leading-[0.94] text-[#f5efe6] drop-shadow-lg">
+            POOJA<br />KHATANE
+          </h1>
+
+          <div class="border-t border-amber-200/30 max-w-md pt-4 flex items-center gap-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-red-600 inline-block shadow-[0_0_8px_#dc2626]"></span>
+            <span class="font-hud text-sm sm:text-base tracking-[0.25em] text-amber-100/90 uppercase">
+              LONDON, UNITED KINGDOM
+            </span>
+          </div>
+
+          <div class="pt-3 flex flex-wrap items-center gap-4">
+            <a href="#section-02" onclick="navigateToSection(1, event)" class="dossier-btn text-sm sm:text-base">
+              OPEN THE CASE FILES →
+            </a>
+            <button type="button" onclick="navigateToSection(2)" class="px-4 py-2.5 text-xs font-hud uppercase tracking-widest text-amber-200/90 border border-amber-700/50 bg-amber-950/30 hover:bg-amber-900/40 rounded transition">
+              JUMP TO EVIDENCE BOARD (3 CASES)
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Detective Character & Evidence Scene (from PDF Page 1) -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <div class="relative max-w-md lg:max-w-full">
+            <img
+              src="./assets/detective_hero.jpg"
+              alt="Illustrated portrait of Pooja Khatane as a forensic detective holding a magnifying glass in front of fraud evidence and bank statements"
+              class="w-full max-w-[500px] h-auto rounded-sm shadow-2xl border border-amber-900/30"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom-Left Section Marker -->
+      <div class="absolute bottom-5 left-6 xl:left-56 z-20 font-courier text-xs sm:text-sm tracking-[0.24em] text-amber-100/75 uppercase">
+        01 · THE CRIME SCENE
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         PAGE 02: WHO IS THE DETECTIVE? (SUBJECT PROFILE & THE METHOD)
+         ===================================================================== -->
+    <section id="section-02" data-section-index="1" class="case-section relative min-h-[92vh] mahogany-desk flex items-center justify-center py-14 px-4 sm:px-8 lg:px-12 border-b border-amber-950/40 overflow-hidden">
+      <!-- Top-Right HUD -->
+      <div class="absolute top-5 right-6 z-20 flex items-center gap-2 text-xs font-hud text-amber-100/80">
+        <span>REC</span>
+        <span class="w-2 h-2 rounded-full bg-red-600 inline-block"></span>
+        <span>SUBJECT PROFILE</span>
+      </div>
+
+      <!-- Decorative Wax Seal & Pushpins on Desk (Left Margin) -->
+      <div class="hidden xl:flex flex-col items-center gap-5 absolute left-8 top-1/3 z-10 select-none pointer-events-none">
+        <div class="flex gap-3">
+          <span class="pushpin"></span>
+          <span class="pushpin"></span>
+        </div>
+        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-red-700 via-red-900 to-stone-950 border-4 border-red-950 shadow-2xl flex items-center justify-center text-[10px] font-hud text-red-200/70 tracking-widest">
+          PK · SEAL
+        </div>
+      </div>
+
+      <!-- Open Dossier Folder -->
+      <div class="relative z-10 max-w-5xl w-full my-6">
+        <div class="dossier-wrapper">
+          <div class="dossier-book grid grid-cols-1 lg:grid-cols-2 min-h-[600px] p-6 sm:p-10 lg:p-12 gap-8 lg:gap-12 relative">
+
+            <!-- Left Page: Subject Profile -->
+            <div class="space-y-4 lg:pr-6">
+              <div class="-mt-2 mb-3">
+                <span class="crimson-label">02 · WHO IS THE DETECTIVE?</span>
+              </div>
+
+              <h2 class="font-serif-display font-bold text-3xl sm:text-4xl text-[#1e1610] tracking-tight">
+                Subject Profile
+              </h2>
+
+              <div class="space-y-3.5 pt-1 text-sm sm:text-[15px] leading-relaxed">
+                <div>
+                  <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.2em] uppercase">SUBJECT</div>
+                  <div class="font-courier text-[#1e1610] font-bold text-base">Pooja Khatane</div>
+                </div>
+
+                <div>
+                  <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.2em] uppercase">BASE</div>
+                  <div class="inline-block relative mt-0.5">
+                    <span class="font-courier text-[#1e1610] relative z-10 px-2 py-0.5">London, United Kingdom</span>
+                    <!-- Hand-drawn red ink oval around London, United Kingdom -->
+                    <svg class="absolute -inset-1 w-[106%] h-[125%] pointer-events-none" viewBox="0 0 220 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <ellipse cx="110" cy="18" rx="106" ry="14" stroke="#b91c1c" stroke-width="2" stroke-dasharray="420" transform="rotate(-1.2 110 18)" />
+                    </svg>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.2em] uppercase">TRAINING</div>
+                  <div class="font-courier text-[#1e1610]">
+                    LLB (Hons) Law, Brunel University London · CFA Level I candidate · Basel CTF certificate
+                  </div>
+                </div>
+
+                <div>
+                  <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.2em] uppercase">SPECIALITY</div>
+                  <div class="font-courier text-[#1e1610]">
+                    Following the money, the statute and the paper trail.
+                  </div>
+                </div>
+
+                <div>
+                  <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.2em] uppercase">STATUS</div>
+                  <div class="font-courier text-[#1e1610]">
+                    Freshly graduated. Dangerously curious.
+                  </div>
+                </div>
+
+                <div>
+                  <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.2em] uppercase">KNOWN FOR</div>
+                  <div class="font-courier text-[#1e1610]">
+                    Reading the footnotes everyone else skips.
+                  </div>
+                </div>
+
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.2em] uppercase">SECRET IDENTITY</span>
+                    <button type="button" onclick="toggleSecretIdentity()" class="text-[11px] font-hud text-[#a91d22] underline hover:text-red-950">
+                      [CLICK TO DECLASSIFY]
+                    </button>
+                  </div>
+                  <div
+                    id="secretIdentityBar"
+                    onclick="toggleSecretIdentity()"
+                    role="button"
+                    tabindex="0"
+                    title="Click to declassify secret identity"
+                    class="mt-1 bg-[#1e1a17] text-transparent select-none px-3 py-1.5 max-w-xs font-courier text-xs rounded-sm cursor-pointer transition-all duration-300 hover:bg-stone-800"
+                  >
+                    Relentless coffee-fuelled footnote hunter &amp; dogged compliance sleuth.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Page: The Method -->
+            <div class="space-y-5 lg:pl-6 relative">
+              <!-- Angled Rubber Stamp SUBJECT 001 -->
+              <div class="flex justify-end -mt-2 mb-1">
+                <span class="rubber-stamp text-sm sm:text-base">SUBJECT 001</span>
+              </div>
+
+              <div>
+                <h2 class="font-serif-display font-bold text-3xl sm:text-4xl text-[#1e1610] tracking-tight">
+                  The Method
+                </h2>
+                <p class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.2em] uppercase mt-1">
+                  HOW EVERY CASE IS WORKED
+                </p>
+              </div>
+
+              <ul class="space-y-4 text-sm sm:text-[15px] leading-relaxed font-courier text-[#1e1610]">
+                <li class="flex items-start gap-3">
+                  <span class="evidence-pin"></span>
+                  <span><strong>Observe.</strong> Read the whole file — the statement, the small print, the footnote.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="evidence-pin"></span>
+                  <span><strong>Question.</strong> Who benefits? Who signed? What doesn't match the story?</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="evidence-pin"></span>
+                  <span><strong>Verify.</strong> Primary sources first. Rules, judgments, regulators — never summaries.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="evidence-pin"></span>
+                  <span><strong>Report.</strong> Plain English, clear verdict, a recommendation someone can act on.</span>
+                </li>
+              </ul>
+
+              <blockquote class="pt-3 border-t border-stone-600/30 font-serif-display italic text-base sm:text-lg text-[#2c2017] leading-snug">
+                “Observe, do not merely see. The money always leaves a trail.”
+              </blockquote>
+
+              <!-- Coffee Ring Stain SVG -->
+              <svg class="coffee-stain" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="76" fill="none" stroke="#6e4726" stroke-width="6" stroke-dasharray="180 14 90 8" opacity="0.65" />
+                <circle cx="103" cy="98" r="72" fill="none" stroke="#543418" stroke-width="2.5" opacity="0.45" />
+              </svg>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Detective Corner Illustration (from Page 2 bottom-right) -->
+      <img
+        src="./assets/detective_corner.jpg"
+        alt="Pooja Khatane detective corner illustration"
+        class="hidden xl:block absolute bottom-0 right-4 w-52 h-auto rounded-t-sm opacity-95 pointer-events-none select-none z-20 shadow-2xl"
+      />
+
+      <!-- Bottom-Right Page Counter -->
+      <div class="absolute bottom-4 right-6 z-30 font-hud text-xs text-amber-100/75">
+        02 / 07
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         PAGE 03: THE EVIDENCE BOARD (THREE CASES. ZERO COLD ONES.)
+         ===================================================================== -->
+    <section id="section-03" data-section-index="2" class="case-section relative min-h-[92vh] corkboard-surface flex flex-col justify-between py-14 px-4 sm:px-8 lg:px-14 border-b border-amber-950/40 overflow-hidden">
+      <!-- Top-Right HUD -->
+      <div class="flex items-center justify-between max-w-7xl mx-auto w-full z-20">
+        <span class="font-hud text-xs text-amber-200/70 uppercase tracking-widest">EVIDENCE LOG · CLICK ANY CASE TO INSPECT</span>
+        <div class="flex items-center gap-2 text-xs font-hud text-amber-100/80">
+          <span>REC</span>
+          <span class="w-2 h-2 rounded-full bg-red-600 inline-block"></span>
+          <span>EVIDENCE ROOM B</span>
+        </div>
+      </div>
+
+      <!-- Top-Right Sticky Note "follow the money" -->
+      <div class="hidden lg:block absolute top-14 right-12 z-10 bg-[#b89f74] text-[#1e1610] px-5 py-4 shadow-xl transform rotate-3 border border-stone-700/40 select-none">
+        <p class="font-serif-display italic text-2xl leading-none">follow<br />the money</p>
+      </div>
+
+      <!-- Center Header & Filter Bar -->
+      <div class="relative z-20 text-center max-w-3xl mx-auto mt-4 mb-8 space-y-3">
+        <div>
+          <span class="crimson-label">03 · THE EVIDENCE BOARD</span>
+        </div>
+        <h2 class="font-serif-display font-bold text-4xl sm:text-6xl text-[#f5efe6] tracking-tight">
+          Three cases. Zero cold ones.
+        </h2>
+        <!-- Interactive Domain Filter Pills -->
+        <div class="pt-2 flex flex-wrap items-center justify-center gap-2">
+          <button type="button" onclick="filterEvidenceBoard('all')" data-board-filter="all" class="board-filter-btn px-3 py-1 text-xs font-hud rounded bg-red-800 text-white border border-red-500/50 transition">
+            ALL CASES (3)
+          </button>
+          <button type="button" onclick="filterEvidenceBoard('case-01')" data-board-filter="case-01" class="board-filter-btn px-3 py-1 text-xs font-hud rounded bg-stone-900/80 text-amber-200/80 border border-amber-800/40 hover:border-amber-500/50 transition">
+            01 · OPEN BANKING &amp; APP FRAUD
+          </button>
+          <button type="button" onclick="filterEvidenceBoard('case-02')" data-board-filter="case-02" class="board-filter-btn px-3 py-1 text-xs font-hud rounded bg-stone-900/80 text-amber-200/80 border border-amber-800/40 hover:border-amber-500/50 transition">
+            02 · AML &amp; SAR INVESTIGATION
+          </button>
+          <button type="button" onclick="filterEvidenceBoard('case-03')" data-board-filter="case-03" class="board-filter-btn px-3 py-1 text-xs font-hud rounded bg-stone-900/80 text-amber-200/80 border border-amber-800/40 hover:border-amber-500/50 transition">
+            03 · FCA CONSUMER DUTY
+          </button>
+        </div>
+      </div>
+
+      <!-- Red Investigator Yarn SVG Connecting the 3 Polaroids -->
+      <div class="relative max-w-6xl mx-auto w-full my-auto py-4">
+        <svg class="hidden lg:block absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 1200 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Horizontal string across top pushpins -->
+          <line x1="200" y1="24" x2="600" y2="14" stroke="#b91c1c" stroke-width="2.5" />
+          <line x1="600" y1="14" x2="1000" y2="26" stroke="#b91c1c" stroke-width="2.5" />
+          <!-- Strings converging to bottom pin -->
+          <line x1="200" y1="24" x2="560" y2="520" stroke="#b91c1c" stroke-width="2.2" opacity="0.85" />
+          <line x1="1000" y1="26" x2="560" y2="520" stroke="#b91c1c" stroke-width="2.2" opacity="0.85" />
+          <circle cx="560" cy="520" r="7" fill="#dc2626" />
+        </svg>
+
+        <!-- 3 Polaroid Cards Grid -->
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 items-stretch">
+
+          <!-- POLAROID 01 -->
+          <article
+            data-case-card="case-01"
+            onclick="navigateToSection(3)"
+            class="polaroid-card cursor-pointer flex flex-col justify-between lg:transform lg:-rotate-2"
+          >
+            <span class="pushpin absolute -top-2.5 left-1/2 -translate-x-1/2 z-20"></span>
+            <div>
+              <div class="relative overflow-hidden bg-stone-900 aspect-[16/10] mb-4">
+                <img
+                  src="./assets/case01_thumb.jpg"
+                  alt="Case 01 — Fraud Detected stamp under magnifying glass and gavel"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.18em] uppercase mb-1">
+                DISSERTATION
+              </div>
+              <h3 class="font-serif-display font-bold text-2xl text-[#1e1610] leading-snug mb-2">
+                Who Pays When the Push Goes Wrong?
+              </h3>
+              <p class="font-courier text-xs sm:text-sm text-[#2b2118] leading-relaxed">
+                Open banking, APP fraud, and who should carry the loss when a customer is tricked into paying.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-stone-400/40 flex items-center justify-between text-xs font-hud text-[#a91d22]">
+              <span>OPEN CASE FILE 01 →</span>
+              <button type="button" onclick="event.stopPropagation(); openExhibitModal('case01')" class="underline hover:text-stone-900">
+                QUICK BRIEF
+              </button>
+            </div>
+          </article>
+
+          <!-- POLAROID 02 -->
+          <article
+            data-case-card="case-02"
+            onclick="navigateToSection(4)"
+            class="polaroid-card cursor-pointer flex flex-col justify-between lg:transform lg:rotate-1 lg:-translate-y-3"
+          >
+            <span class="pushpin absolute -top-2.5 left-1/2 -translate-x-1/2 z-20"></span>
+            <div>
+              <div class="relative overflow-hidden bg-stone-900 aspect-[16/10] mb-4">
+                <img
+                  src="./assets/case02_thumb.jpg"
+                  alt="Case 02 — Blank dossier folder with coffee stain and magnifying glass"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.18em] uppercase mb-1">
+                SIMULATED AML INVESTIGATION
+              </div>
+              <h3 class="font-serif-display font-bold text-2xl text-[#1e1610] leading-snug mb-2">
+                The Client Who Didn't Add Up
+              </h3>
+              <p class="font-courier text-xs sm:text-sm text-[#2b2118] leading-relaxed">
+                A fictional customer, a money trail that outgrew its story, and a SAR-style memo.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-stone-400/40 flex items-center justify-between text-xs font-hud text-[#a91d22]">
+              <span>OPEN CASE FILE 02 →</span>
+              <button type="button" onclick="event.stopPropagation(); openExhibitModal('case02')" class="underline hover:text-stone-900">
+                QUICK BRIEF
+              </button>
+            </div>
+          </article>
+
+          <!-- POLAROID 03 -->
+          <article
+            data-case-card="case-03"
+            onclick="navigateToSection(5)"
+            class="polaroid-card cursor-pointer flex flex-col justify-between lg:transform lg:-rotate-1"
+          >
+            <span class="pushpin absolute -top-2.5 left-1/2 -translate-x-1/2 z-20"></span>
+            <div>
+              <div class="relative overflow-hidden bg-stone-900 aspect-[16/10] mb-4">
+                <img
+                  src="./assets/case03_thumb.jpg"
+                  alt="Case 03 — Corkboard with follow the money note"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.18em] uppercase mb-1">
+                SIMULATED COMPLIANCE REVIEW
+              </div>
+              <h3 class="font-serif-display font-bold text-2xl text-[#1e1610] leading-snug mb-2">
+                Fine Print, Big Gaps
+              </h3>
+              <p class="font-courier text-xs sm:text-sm text-[#2b2118] leading-relaxed">
+                A UK fintech's customer terms measured against the FCA Consumer Duty.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-stone-400/40 flex items-center justify-between text-xs font-hud text-[#a91d22]">
+              <span>OPEN CASE FILE 03 →</span>
+              <button type="button" onclick="event.stopPropagation(); openExhibitModal('case03')" class="underline hover:text-stone-900">
+                QUICK BRIEF
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Bottom Metadata Bar -->
+      <div class="max-w-7xl mx-auto w-full pt-8 flex flex-wrap items-center justify-between gap-4 text-xs font-hud text-amber-100/75 z-20">
+        <div>3 ITEMS LOGGED <span class="text-red-500">·</span> TRAINING AND ACADEMIC WORK <span class="text-red-500">·</span> CLEARLY LABELLED</div>
+        <div>03 / 07</div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         PAGE 04: CASE FILE 01 · DISSERTATION
+         ===================================================================== -->
+    <section id="section-04" data-section-index="3" class="case-section relative min-h-[92vh] mahogany-desk flex items-center justify-center py-14 px-4 sm:px-8 lg:px-12 border-b border-amber-950/40 overflow-hidden">
+      <!-- Top-Right HUD -->
+      <div class="absolute top-5 right-6 z-20 flex items-center gap-2 text-xs font-hud text-amber-100/80">
+        <span>REC</span>
+        <span class="w-2 h-2 rounded-full bg-red-600 inline-block"></span>
+        <span>CASE FILE 01</span>
+      </div>
+
+      <!-- Faint Desk Stamp Top-Right -->
+      <div class="hidden lg:block absolute top-12 right-20 z-0 rubber-stamp opacity-35 text-lg">
+        EXHIBIT A
+      </div>
+
+      <div class="relative z-10 max-w-5xl w-full my-6">
+        <div class="dossier-wrapper">
+          <div class="dossier-book grid grid-cols-1 lg:grid-cols-2 min-h-[600px] p-6 sm:p-10 lg:p-12 gap-8 lg:gap-12 relative">
+
+            <!-- Left Dossier Page -->
+            <div class="space-y-5 lg:pr-6">
+              <div class="-mt-2 flex flex-wrap items-center justify-between gap-2">
+                <span class="crimson-label">CASE FILE 01 · DISSERTATION</span>
+              </div>
+
+              <h2 class="font-serif-display font-bold text-3xl sm:text-4xl text-[#1e1610] leading-tight">
+                Who Pays When the Push Goes Wrong?
+              </h2>
+
+              <div class="space-y-2">
+                <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.2em] uppercase">THE QUESTION</div>
+                <p class="font-courier text-sm sm:text-[15px] text-[#1e1610] leading-relaxed">
+                  When a customer is deceived into authorising a payment to a fraudster, who should carry the loss — the customer, the bank that sent the money, or the bank that received it?
+                </p>
+              </div>
+
+              <div class="space-y-3 pt-1">
+                <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.2em] uppercase">THE EVIDENCE</div>
+                <ul class="space-y-3 font-courier text-sm sm:text-[15px] text-[#1e1610] leading-relaxed">
+                  <li class="flex items-start gap-3">
+                    <span class="evidence-pin"></span>
+                    <span>Open banking (PSD2, implemented by the Payment Services Regulations 2017, and the CMA Retail Banking Order 2017) let third parties access account data and initiate payments — more hands on every transaction.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="evidence-pin"></span>
+                    <span>In authorised push payment (APP) fraud the victim approves the payment, so the protections built for <em class="italic underline decoration-red-800/60">unauthorised</em> transactions do not reach them.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="evidence-pin"></span>
+                    <span>From 7 October 2024 the Payment Systems Regulator requires in-scope Faster Payments APP fraud victims to be reimbursed in most cases: cost split 50:50 between sending and receiving firms, capped at £85,000 per claim.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Dossier Page -->
+            <div class="space-y-5 lg:pl-6 flex flex-col justify-between relative">
+              <div class="space-y-5">
+                <div class="space-y-3 pt-2">
+                  <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.2em] uppercase">THE METHOD</div>
+                  <ul class="space-y-3 font-courier text-sm sm:text-[15px] text-[#1e1610] leading-relaxed">
+                    <li class="flex items-start gap-3">
+                      <span class="evidence-pin"></span>
+                      <span>Dissertation: <em class="italic">Open Banking and Consumer Protection in the United Kingdom</em> (LLB, Brunel University London).</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="evidence-pin"></span>
+                      <span>Doctrinal analysis of UK payment regulation, APP fraud liability and risk allocation, synthesising 60+ primary and secondary sources.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="evidence-pin"></span>
+                      <span>Statutes, regulator policy statements and case law read in the original — referenced in OSCOLA.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="space-y-2 pt-2">
+                  <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.2em] uppercase">THE VERDICT</div>
+                  <blockquote class="font-serif-display italic text-base sm:text-[17px] text-[#1e1610] leading-relaxed border-l-2 border-[#a91d22] pl-4">
+                    “Open banking widened the doors; the liability rules had to catch up. Loss should sit with those best placed to detect and stop the fraud — which is why the move from voluntary codes to mandatory, shared reimbursement matters.”
+                  </blockquote>
+                </div>
+              </div>
+
+              <!-- Tags & Interactive Exhibit Trigger -->
+              <div class="space-y-3 pt-4 relative z-10">
+                <div class="flex flex-wrap gap-2">
+                  <button type="button" onclick="openExhibitModal('case01')" class="case-tag">LEGAL RESEARCH</button>
+                  <button type="button" onclick="openExhibitModal('case01')" class="case-tag">PAYMENTS REGULATION</button>
+                  <button type="button" onclick="openExhibitModal('case01')" class="case-tag">RISK ALLOCATION</button>
+                  <button type="button" onclick="openExhibitModal('case01')" class="case-tag">OSCOLA</button>
+                </div>
+                <div>
+                  <button type="button" onclick="openExhibitModal('case01')" class="text-xs font-hud text-[#a91d22] hover:text-red-950 underline tracking-wider">
+                    + INSPECT PSR REIMBURSEMENT MODEL &amp; STATUTORY CITATIONS →
+                  </button>
+                </div>
+              </div>
+
+              <!-- Coffee Ring Stain SVG -->
+              <svg class="coffee-stain" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="76" fill="none" stroke="#6e4726" stroke-width="6" stroke-dasharray="180 14 90 8" opacity="0.65" />
+                <circle cx="103" cy="98" r="72" fill="none" stroke="#543418" stroke-width="2.5" opacity="0.45" />
+              </svg>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom-Right Footer -->
+      <div class="absolute bottom-4 right-6 z-20 text-right font-hud text-xs text-amber-100/75 space-y-0.5">
+        <div>UNDER THE MAGNIFYING GLASS</div>
+        <div>04 / 07</div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         PAGE 05: CASE FILE 02 · SIMULATED AML INVESTIGATION
+         ===================================================================== -->
+    <section id="section-05" data-section-index="4" class="case-section relative min-h-[92vh] mahogany-desk flex items-center justify-center py-14 px-4 sm:px-8 lg:px-12 border-b border-amber-950/40 overflow-hidden">
+      <!-- Top-Right HUD -->
+      <div class="absolute top-5 right-6 z-20 flex items-center gap-2 text-xs font-hud text-amber-100/80">
+        <span>REC</span>
+        <span class="w-2 h-2 rounded-full bg-red-600 inline-block"></span>
+        <span>CASE FILE 02</span>
+      </div>
+
+      <!-- Faint Desk Stamp Top-Right -->
+      <div class="hidden lg:block absolute top-12 right-20 z-0 rubber-stamp opacity-35 text-lg">
+        CASE FILE
+      </div>
+
+      <div class="relative z-10 max-w-5xl w-full my-6">
+        <div class="dossier-wrapper">
+          <div class="dossier-book grid grid-cols-1 lg:grid-cols-2 min-h-[600px] p-6 sm:p-10 lg:p-12 gap-8 lg:gap-12 relative">
+
+            <!-- Left Dossier Page -->
+            <div class="space-y-5 lg:pr-6">
+              <div class="-mt-2 flex flex-wrap items-center gap-3">
+                <span class="crimson-label">CASE FILE 02 · SIMULATED AML INVESTIGATION</span>
+                <span class="font-hud text-[11px] text-stone-700 tracking-[0.16em] uppercase">
+                  FICTIONAL CLIENT · NO REAL DATA
+                </span>
+              </div>
+
+              <h2 class="font-serif-display font-bold text-3xl sm:text-4xl text-[#1e1610] leading-tight">
+                The Client Who Didn't Add Up
+              </h2>
+
+              <div class="space-y-2">
+                <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.2em] uppercase">THE QUESTION</div>
+                <p class="font-courier text-sm sm:text-[15px] text-[#1e1610] leading-relaxed">
+                  A new business client's account activity no longer matches its stated profile. Is this money laundering — and what must a regulated firm do about it?
+                </p>
+              </div>
+
+              <div class="space-y-3 pt-1">
+                <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.2em] uppercase">THE EVIDENCE</div>
+                <ul class="space-y-3 font-courier text-sm sm:text-[15px] text-[#1e1610] leading-relaxed">
+                  <li class="flex items-start gap-3">
+                    <span class="evidence-pin"></span>
+                    <span>Onboarding file: small import business, declared turnover £180,000 a year. Actual throughput: £1.3 million in four months.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="evidence-pin"></span>
+                    <span>Eleven round-sum inbound transfers from unconnected companies, each just under £10,000.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="evidence-pin"></span>
+                    <span>Funds moved out within 48 hours to accounts in three jurisdictions. Invoices requested; none supplied.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="evidence-pin"></span>
+                    <span>Beneficial owner changed twice in a year. The new sole director is 22 with no trading history.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Dossier Page -->
+            <div class="space-y-5 lg:pl-6 flex flex-col justify-between relative">
+              <div class="space-y-5">
+                <div class="space-y-3 pt-2">
+                  <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.2em] uppercase">THE METHOD</div>
+                  <ul class="space-y-3 font-courier text-sm sm:text-[15px] text-[#1e1610] leading-relaxed">
+                    <li class="flex items-start gap-3">
+                      <span class="evidence-pin"></span>
+                      <span>Customer due diligence and enhanced due diligence under the Money Laundering Regulations 2017.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="evidence-pin"></span>
+                      <span>Red-flag review against JMLSG guidance; typologies identified: structuring and pass-through (“mule”) activity.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="evidence-pin"></span>
+                      <span>Output: internal escalation memo to the MLRO and a draft Suspicious Activity Report in NCA format.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="space-y-2 pt-2">
+                  <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.2em] uppercase">THE VERDICT</div>
+                  <blockquote class="font-serif-display italic text-base sm:text-[17px] text-[#1e1610] leading-relaxed border-l-2 border-[#a91d22] pl-4">
+                    “The pattern met the ‘knows or suspects’ threshold. Recommendation: escalate to the MLRO, file a SAR with the National Crime Agency under the Proceeds of Crime Act 2002, and do not tip off the client.”
+                  </blockquote>
+                </div>
+              </div>
+
+              <!-- Tags & Interactive Exhibit Trigger -->
+              <div class="space-y-3 pt-4 relative z-10">
+                <div class="flex flex-wrap gap-2">
+                  <button type="button" onclick="openExhibitModal('case02')" class="case-tag">AML</button>
+                  <button type="button" onclick="openExhibitModal('case02')" class="case-tag">KYC / CDD</button>
+                  <button type="button" onclick="openExhibitModal('case02')" class="case-tag">SAR DRAFTING</button>
+                  <button type="button" onclick="openExhibitModal('case02')" class="case-tag">TYPOLOGIES</button>
+                </div>
+                <div>
+                  <button type="button" onclick="openExhibitModal('case02')" class="text-xs font-hud text-[#a91d22] hover:text-red-950 underline tracking-wider">
+                    + INSPECT AML RED-FLAG MATRIX &amp; DRAFT SAR SUMMARY →
+                  </button>
+                </div>
+              </div>
+
+              <!-- Coffee Ring Stain SVG -->
+              <svg class="coffee-stain" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="76" fill="none" stroke="#6e4726" stroke-width="6" stroke-dasharray="180 14 90 8" opacity="0.65" />
+                <circle cx="103" cy="98" r="72" fill="none" stroke="#543418" stroke-width="2.5" opacity="0.45" />
+              </svg>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom-Right Footer -->
+      <div class="absolute bottom-4 right-6 z-20 text-right font-hud text-xs text-amber-100/75 space-y-0.5">
+        <div>UNDER THE MAGNIFYING GLASS</div>
+        <div>05 / 07</div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         PAGE 06: CASE FILE 03 · SIMULATED COMPLIANCE REVIEW
+         ===================================================================== -->
+    <section id="section-06" data-section-index="5" class="case-section relative min-h-[92vh] mahogany-desk flex items-center justify-center py-14 px-4 sm:px-8 lg:px-12 border-b border-amber-950/40 overflow-hidden">
+      <!-- Top-Right HUD -->
+      <div class="absolute top-5 right-6 z-20 flex items-center gap-2 text-xs font-hud text-amber-100/80">
+        <span>REC</span>
+        <span class="w-2 h-2 rounded-full bg-red-600 inline-block"></span>
+        <span>CASE FILE 03</span>
+      </div>
+
+      <!-- Faint Desk Stamp Top-Right -->
+      <div class="hidden lg:block absolute top-12 right-20 z-0 rubber-stamp opacity-35 text-lg">
+        REVIEWED
+      </div>
+
+      <div class="relative z-10 max-w-5xl w-full my-6">
+        <div class="dossier-wrapper">
+          <div class="dossier-book grid grid-cols-1 lg:grid-cols-2 min-h-[600px] p-6 sm:p-10 lg:p-12 gap-8 lg:gap-12 relative">
+
+            <!-- Left Dossier Page -->
+            <div class="space-y-5 lg:pr-6">
+              <div class="-mt-2 flex flex-wrap items-center gap-3">
+                <span class="crimson-label">CASE FILE 03 · SIMULATED COMPLIANCE REVIEW</span>
+                <span class="font-hud text-[11px] text-stone-700 tracking-[0.16em] uppercase">
+                  ILLUSTRATIVE · ANONYMISED FIRM
+                </span>
+              </div>
+
+              <h2 class="font-serif-display font-bold text-3xl sm:text-4xl text-[#1e1610] leading-tight">
+                Fine Print, Big Gaps
+              </h2>
+
+              <div class="space-y-2">
+                <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.2em] uppercase">THE QUESTION</div>
+                <p class="font-courier text-sm sm:text-[15px] text-[#1e1610] leading-relaxed">
+                  A fintech's customer terms look compliant on paper. Do they actually deliver the outcomes the FCA's Consumer Duty demands?
+                </p>
+              </div>
+
+              <div class="space-y-3 pt-1">
+                <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.2em] uppercase">THE EVIDENCE</div>
+                <ul class="space-y-3 font-courier text-sm sm:text-[15px] text-[#1e1610] leading-relaxed">
+                  <li class="flex items-start gap-3">
+                    <span class="evidence-pin"></span>
+                    <span>Fees for a foreign payment split across three documents — the total cost is never shown in one place.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="evidence-pin"></span>
+                    <span>The fraud warning sits on page 14 of the terms; nothing appears at the moment a customer makes a payment.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="evidence-pin"></span>
+                    <span>Account-freeze process: no stated timeline and no named contact route for the customer.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="evidence-pin"></span>
+                    <span>No sign that the customer journey was tested with people in vulnerable circumstances.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Dossier Page -->
+            <div class="space-y-5 lg:pl-6 flex flex-col justify-between relative">
+              <div class="space-y-5">
+                <div class="space-y-3 pt-2">
+                  <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.2em] uppercase">THE METHOD</div>
+                  <ul class="space-y-3 font-courier text-sm sm:text-[15px] text-[#1e1610] leading-relaxed">
+                    <li class="flex items-start gap-3">
+                      <span class="evidence-pin"></span>
+                      <span>Documents mapped against the Consumer Duty (FCA Principle 12 and PRIN 2A, in force for open products since 31 July 2023).</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="evidence-pin"></span>
+                      <span>Scored against the four outcomes: products &amp; services, price &amp; value, consumer understanding, consumer support.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="evidence-pin"></span>
+                      <span>Illustrative exercise on an anonymised UK fintech's public documents; findings written as a gap-analysis memo.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="space-y-2 pt-2">
+                  <div class="font-hud text-xs text-[#a91d22] font-bold tracking-[0.2em] uppercase">THE VERDICT</div>
+                  <blockquote class="font-serif-display italic text-base sm:text-[17px] text-[#1e1610] leading-relaxed border-l-2 border-[#a91d22] pl-4">
+                    “Compliant on paper, weak on outcomes. Fix list: one-page fee summary, fraud warning at the point of payment, published freeze timelines, and vulnerability testing before launch.”
+                  </blockquote>
+                </div>
+              </div>
+
+              <!-- Tags & Interactive Exhibit Trigger -->
+              <div class="space-y-3 pt-4 relative z-10">
+                <div class="flex flex-wrap gap-2">
+                  <button type="button" onclick="openExhibitModal('case03')" class="case-tag">FCA CONSUMER DUTY</button>
+                  <button type="button" onclick="openExhibitModal('case03')" class="case-tag">REGULATORY ANALYSIS</button>
+                  <button type="button" onclick="openExhibitModal('case03')" class="case-tag">GAP ANALYSIS</button>
+                  <button type="button" onclick="openExhibitModal('case03')" class="case-tag">RECOMMENDATIONS</button>
+                </div>
+                <div>
+                  <button type="button" onclick="openExhibitModal('case03')" class="text-xs font-hud text-[#a91d22] hover:text-red-950 underline tracking-wider">
+                    + INSPECT PRIN 2A FOUR-OUTCOMES SCORECARD →
+                  </button>
+                </div>
+              </div>
+
+              <!-- Coffee Ring Stain SVG -->
+              <svg class="coffee-stain" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="76" fill="none" stroke="#6e4726" stroke-width="6" stroke-dasharray="180 14 90 8" opacity="0.65" />
+                <circle cx="103" cy="98" r="72" fill="none" stroke="#543418" stroke-width="2.5" opacity="0.45" />
+              </svg>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom-Right Footer -->
+      <div class="absolute bottom-4 right-6 z-20 text-right font-hud text-xs text-amber-100/75 space-y-0.5">
+        <div>UNDER THE MAGNIFYING GLASS</div>
+        <div>06 / 07</div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         PAGE 07: THE NEXT INVESTIGATION (CONTACT & DISPATCH)
+         ===================================================================== -->
+    <section id="section-07" data-section-index="6" class="case-section relative min-h-[92vh] corkboard-surface flex items-center overflow-hidden py-14 lg:py-16">
+      <!-- Left Ambient Crime Scene Evidence Strip -->
+      <img
+        src="./assets/crime_scene_left.jpg"
+        alt="Crime scene evidence board props"
+        class="hidden xl:block absolute left-0 top-0 h-full w-auto object-cover opacity-85 pointer-events-none select-none"
+      />
+
+      <!-- Top-Right HUD -->
+      <div class="absolute top-5 right-6 z-20 flex items-center gap-2 text-xs font-hud text-amber-100/80">
+        <span>REC</span>
+        <span class="w-2 h-2 rounded-full bg-red-600 inline-block"></span>
+        <span>END OF FILE</span>
+      </div>
+
+      <!-- Top-Right Red Stamp CASE OPEN -->
+      <div class="hidden sm:block absolute top-20 right-10 lg:right-36 z-20 case-open-stamp text-lg sm:text-2xl">
+        CASE OPEN
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto w-full px-6 sm:px-10 xl:pl-56 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+        <!-- Left Contact Content -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="flex flex-wrap items-start justify-between gap-4">
+            <div class="pt-4">
+              <span class="crimson-label">07 · THE NEXT INVESTIGATION</span>
+            </div>
+
+            <!-- Pinned Speech Note -->
+            <div class="relative inline-block transform rotate-2">
+              <span class="pushpin absolute -top-2.5 left-1/2 -translate-x-1/2 z-10"></span>
+              <div class="bg-[#efe7d6] text-[#1e1610] px-5 py-4 max-w-xs shadow-2xl border border-stone-400/50">
+                <p class="font-courier text-sm sm:text-base leading-snug">
+                  “If the evidence interests you, the detective is one message away.”
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="font-serif-display font-bold text-5xl sm:text-6xl xl:text-7xl leading-[1.02] text-[#f5efe6]">
+            The next case<br />
+            could be <em class="italic text-[#c82329] font-serif-display">yours.</em>
+          </h2>
+
+          <div class="space-y-1 font-courier text-sm sm:text-base tracking-[0.22em] text-amber-100/90 uppercase">
+            <div>FINANCIAL CRIME <span class="text-red-500">·</span> AML &amp; KYC</div>
+            <div>FORENSIC RISK <span class="text-red-500">·</span> COMPLIANCE</div>
+          </div>
+
+          <!-- 3 Action Channels (matching PDF Page 7 layout) -->
+          <div class="space-y-3.5 pt-2 max-w-xl">
+            <!-- Row 1: Tip Line -->
+            <div class="flex flex-wrap items-center gap-4">
+              <button
+                type="button"
+                onclick="openTipLineModal('tip')"
+                class="w-60 text-left px-4 py-2.5 bg-[#a91d22] hover:bg-[#c82329] text-amber-50 font-courier text-xs sm:text-sm tracking-[0.18em] uppercase shadow-lg transition flex items-center justify-between"
+              >
+                <span>TIP LINE</span>
+                <span>→</span>
+              </button>
+              <button
+                type="button"
+                onclick="copyContactValue('your@email.com', 'Email address')"
+                class="font-courier text-sm sm:text-base text-amber-100 hover:text-red-400 tracking-wider transition"
+                title="Click to copy email address"
+              >
+                your@email.com
+              </button>
+            </div>
+
+            <!-- Row 2: Official Channels -->
+            <div class="flex flex-wrap items-center gap-4">
+              <button
+                type="button"
+                onclick="copyContactValue('https://linkedin.com/in/your-profile', 'LinkedIn URL')"
+                class="w-60 text-left px-4 py-2.5 bg-[#a91d22] hover:bg-[#c82329] text-amber-50 font-courier text-xs sm:text-sm tracking-[0.18em] uppercase shadow-lg transition flex items-center justify-between"
+              >
+                <span>OFFICIAL CHANNELS</span>
+                <span>→</span>
+              </button>
+              <button
+                type="button"
+                onclick="copyContactValue('linkedin.com/in/your-profile', 'LinkedIn profile')"
+                class="font-courier text-sm sm:text-base text-amber-100 hover:text-red-400 tracking-wider transition"
+                title="Click to copy LinkedIn profile"
+              >
+                linkedin.com/in/your-profile
+              </button>
+            </div>
+
+            <!-- Row 3: Full Dossier (CV) -->
+            <div class="flex flex-wrap items-center gap-4">
+              <button
+                type="button"
+                onclick="openTipLineModal('cv')"
+                class="w-60 text-left px-4 py-2.5 bg-[#a91d22] hover:bg-[#c82329] text-amber-50 font-courier text-xs sm:text-sm tracking-[0.18em] uppercase shadow-lg transition flex items-center justify-between"
+              >
+                <span>FULL DOSSIER (CV)</span>
+                <span>→</span>
+              </button>
+              <span class="font-courier text-sm sm:text-base text-amber-100/85 tracking-wider">
+                available on request
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Detective Portrait -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <div class="relative max-w-md lg:max-w-full">
+            <img
+              src="./assets/detective_hero.jpg"
+              alt="Pooja Khatane Forensic Risk Investigator"
+              class="w-full max-w-[500px] h-auto rounded-sm shadow-2xl border border-amber-900/30"
+            />
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom-Left End of File Footer -->
+      <div class="absolute bottom-5 left-6 xl:left-56 z-20 font-hud text-xs tracking-[0.22em] text-amber-100/70 uppercase">
+        END OF FILE <span class="text-red-500">·</span> © 2026 <span class="text-red-500">·</span> LONDON
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================================
+       MODAL 1: CASE EXHIBIT & FORENSIC BREAKDOWN MODAL
+       ===================================================================== -->
+  <div id="exhibitModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+    <div class="relative max-w-2xl w-full bg-[#dfd0b8] text-[#1e1610] rounded-sm shadow-2xl border-4 border-[#473321] p-6 sm:p-8 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-start justify-between gap-4 border-b border-stone-500/40 pb-4">
+        <div>
+          <span id="modalCaseBadge" class="crimson-label text-xs">CASE FILE EXHIBIT</span>
+          <h3 id="modalCaseTitle" class="font-serif-display font-bold text-2xl sm:text-3xl mt-2 text-[#1e1610]"></h3>
+        </div>
+        <button type="button" onclick="closeExhibitModal()" class="px-2.5 py-1 font-hud text-xs bg-stone-900 text-amber-100 hover:bg-red-900 rounded">
+          ESC · CLOSE
+        </button>
+      </div>
+
+      <div id="modalCaseBody" class="space-y-4 py-5 font-courier text-sm leading-relaxed"></div>
+
+      <div class="border-t border-stone-500/40 pt-4 flex flex-wrap items-center justify-between gap-3">
+        <span class="font-hud text-xs text-stone-700">LOGGED BY: POOJA KHATANE · LONDON, UK</span>
+        <button type="button" onclick="closeExhibitModal()" class="px-4 py-2 bg-[#a91d22] text-white font-hud text-xs uppercase tracking-widest hover:bg-red-800">
+          RETURN TO DOSSIER
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       MODAL 2: TIP LINE & FULL DOSSIER (CV) REQUEST DISPATCH MODAL
+       ===================================================================== -->
+  <div id="tipLineModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+    <div class="relative max-w-lg w-full bg-[#dfd0b8] text-[#1e1610] rounded-sm shadow-2xl border-4 border-[#473321] p-6 sm:p-8">
+      <div class="flex items-start justify-between gap-4 border-b border-stone-500/40 pb-3">
+        <div>
+          <span id="dispatchBadge" class="crimson-label text-xs">ENCRYPTED TIP LINE</span>
+          <h3 id="dispatchHeading" class="font-serif-display font-bold text-2xl mt-2">Transmit Case Inquiry</h3>
+        </div>
+        <button type="button" onclick="closeTipLineModal()" class="px-2.5 py-1 font-hud text-xs bg-stone-900 text-amber-100 hover:bg-red-900 rounded">
+          CLOSE
+        </button>
+      </div>
+
+      <form id="dispatchForm" onsubmit="submitDispatchForm(event)" class="space-y-4 pt-4 font-courier text-sm">
+        <div>
+          <label for="senderName" class="block font-hud text-xs text-[#a91d22] uppercase mb-1">INFORMANT / RECRUITER NAME</label>
+          <input id="senderName" type="text" required placeholder="e.g. Jane Doe — Head of Financial Crime" class="w-full px-3 py-2 bg-[#efe6d5] border border-stone-500 text-[#1e1610] focus:outline-none focus:border-red-800" />
+        </div>
+        <div>
+          <label for="senderOrg" class="block font-hud text-xs text-[#a91d22] uppercase mb-1">FIRM / ORGANISATION</label>
+          <input id="senderOrg" type="text" placeholder="e.g. FinTech / Regulated Bank / Advisory" class="w-full px-3 py-2 bg-[#efe6d5] border border-stone-500 text-[#1e1610] focus:outline-none focus:border-red-800" />
+        </div>
+        <div>
+          <label for="inquiryType" class="block font-hud text-xs text-[#a91d22] uppercase mb-1">SUBJECT CLASSIFICATION</label>
+          <select id="inquiryType" class="w-full px-3 py-2 bg-[#efe6d5] border border-stone-500 text-[#1e1610] focus:outline-none focus:border-red-800">
+            <option value="Full Dossier (CV) Request">Request Full Dossier (CV) &amp; Writing Samples</option>
+            <option value="AML / KYC &amp; Financial Crime Role">AML / KYC &amp; Financial Crime Role</option>
+            <option value="Forensic Risk &amp; Compliance Inquiry">Forensic Risk &amp; FCA Compliance Inquiry</option>
+          </select>
+        </div>
+        <div>
+          <label for="senderNotes" class="block font-hud text-xs text-[#a91d22] uppercase mb-1">BRIEFING NOTES</label>
+          <textarea id="senderNotes" rows="3" required placeholder="Share role details or request Pooja Khatane's full CV dossier..." class="w-full px-3 py-2 bg-[#efe6d5] border border-stone-500 text-[#1e1610] focus:outline-none focus:border-red-800"></textarea>
+        </div>
+        <div class="flex items-center justify-end gap-3 pt-2">
+          <button type="button" onclick="closeTipLineModal()" class="px-4 py-2 border border-stone-600 text-stone-800 font-hud text-xs uppercase">
+            CANCEL
+          </button>
+          <button type="submit" class="px-5 py-2 bg-[#a91d22] hover:bg-red-800 text-white font-hud text-xs uppercase tracking-widest">
+            PREPARE DISPATCH →
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toastBanner" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 hidden bg-[#1e1610] text-amber-100 border border-red-700 px-4 py-2.5 rounded shadow-2xl font-hud text-xs tracking-wider"></div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
