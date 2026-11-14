@@ -896,49 +896,46 @@
           </div>
 
           <!-- 3 Action Channels (matching PDF Page 7 layout) -->
-          <div class="space-y-3.5 pt-2 max-w-xl">
+          <!-- Two columns: action button | its value, so both values line up -->
+          <div class="contact-channels grid grid-cols-1 sm:grid-cols-[max-content_minmax(0,max-content)] items-center gap-x-4 gap-y-2 sm:gap-y-3.5 pt-2">
             <!-- Row 1: Tip Line -->
-            <div class="flex flex-wrap items-center gap-4">
-              <button
-                type="button"
-                onclick="openTipLineModal('tip')"
-                class="w-60 text-left px-4 py-2.5 bg-[#a91d22] hover:bg-[#c82329] text-amber-50 font-courier text-xs sm:text-sm tracking-[0.18em] uppercase shadow-lg transition flex items-center justify-between"
-              >
-                <span>TIP LINE</span>
-                <span>→</span>
-              </button>
-              <button
-                type="button"
-                onclick="copyContactValue('pkhatane999@gmail.com', 'Email address')"
-                class="font-courier text-sm sm:text-base text-amber-100 hover:text-red-400 tracking-wider transition"
-                title="Click to copy email address"
-              >
-                pkhatane999@gmail.com
-              </button>
-            </div>
+            <button
+              type="button"
+              onclick="openTipLineModal('tip')"
+              class="w-full whitespace-nowrap gap-3 text-left px-4 py-2.5 bg-[#a91d22] hover:bg-[#c82329] text-amber-50 font-courier text-xs sm:text-sm tracking-[0.12em] uppercase shadow-lg transition flex items-center justify-between"
+            >
+              <span>TIP LINE</span>
+              <span aria-hidden="true">→</span>
+            </button>
+            <button
+              type="button"
+              onclick="copyContactValue('pkhatane999@gmail.com', 'Email address')"
+              class="contact-value justify-self-start text-left font-courier text-sm text-amber-100 hover:text-red-400 tracking-normal transition mb-3 sm:mb-0"
+              title="Click to copy email address"
+              aria-label="Copy email address pkhatane999@gmail.com"
+            >
+              pkhatane999@gmail.com
+            </button>
 
             <!-- Row 2: Official Channels -->
-            <div class="flex flex-wrap items-center gap-4">
-              <button
-                type="button"
-                onclick="copyContactValue('https://www.linkedin.com/in/pooja-khatane-56b9471b3', 'LinkedIn URL')"
-                class="w-60 text-left px-4 py-2.5 bg-[#a91d22] hover:bg-[#c82329] text-amber-50 font-courier text-xs sm:text-sm tracking-[0.18em] uppercase shadow-lg transition flex items-center justify-between"
-              >
-                <span>OFFICIAL CHANNELS</span>
-                <span>→</span>
-              </button>
-              <button
-                type="button"
-                onclick="copyContactValue('https://www.linkedin.com/in/pooja-khatane-56b9471b3', 'LinkedIn profile')"
-                class="font-courier text-sm sm:text-base text-amber-100 hover:text-red-400 tracking-wider transition"
-                title="Click to copy LinkedIn profile"
-              >
-                https://www.linkedin.com/in/pooja-khatane-56b9471b3
-              </button>
-            </div>
-
-           
-            </div>
+            <a
+              href="https://www.linkedin.com/in/pooja-khatane-56b9471b3"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full whitespace-nowrap gap-3 text-left px-4 py-2.5 bg-[#a91d22] hover:bg-[#c82329] text-amber-50 font-courier text-xs sm:text-sm tracking-[0.12em] uppercase shadow-lg transition flex items-center justify-between"
+            >
+              <span>OFFICIAL CHANNELS</span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/pooja-khatane-56b9471b3"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-value justify-self-start font-courier text-sm text-amber-100 hover:text-red-400 tracking-normal transition [overflow-wrap:anywhere]"
+              title="Open LinkedIn profile in a new tab"
+            >
+              linkedin.com/in/<wbr />pooja-khatane-56b9471b3
+            </a>
           </div>
         </div>
 
