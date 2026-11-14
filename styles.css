@@ -289,3 +289,8 @@
       display: flex;
       min-height: calc(100vh - 56px);
     }
+
+/* Contact channels: hide the click focus box, keep a ring for keyboard users */
+.contact-value:focus { outline: none; }
+.contact-value:focus-visible { outline: 1px dashed rgba(254, 243, 199, 0.7); outline-offset: 4px; }
+button.contact-value { cursor: copy; }
