@@ -29,11 +29,11 @@
             <div class="bg-[#efe6d5] p-3 border border-stone-400">
               <div class="font-hud text-[11px] text-stone-600">EVIDENCE BASE</div>
               <div class="font-serif-display font-bold text-2xl text-[#1e1610] mt-1">60+</div>
-              <div class="text-xs mt-1">OSCOLA-cited primary/secondary sources</div>
+              <div class="text-xs mt-1">OSCOLA cited primary/secondary sources</div>
             </div>
           </div>
           <p class="italic text-stone-800 border-l-2 border-[#a91d22] pl-3">
-            <strong>Core Finding:</strong> Because APP fraud victims authorise the push payment under deception, remedies designed for unauthorised payments fall short—making mandatory, shared reimbursement across sending and receiving firms essential to align fraud-prevention incentives.
+            <strong>Core Finding:</strong> Because APP fraud victims authorise the push payment under deception, remedies designed for unauthorised payments fall short, making mandatory, shared reimbursement across sending and receiving firms essential to align fraud prevention incentives.
           </p>
         `
       },
@@ -65,9 +65,9 @@
             </div>
           </div>
           <ul class="list-disc pl-5 space-y-1.5">
-            <li><strong>Structuring Red Flag:</strong> 11 round-sum inbound transfers from unconnected companies, each just under £10,000.</li>
-            <li><strong>Pass-Through Velocity:</strong> Funds exited within 48 hours across 3 jurisdictions with zero commercial invoices supplied.</li>
-            <li><strong>Control &amp; Governance Risk:</strong> Beneficial ownership changed twice in 12 months; new 22-year-old sole director has no trading history.</li>
+            <li><strong>Structuring Red Flag:</strong> 11 round sum inbound transfers from unconnected companies, each just under £10,000.</li>
+            <li><strong>Pass Through Velocity:</strong> Funds exited within 48 hours across 3 jurisdictions with zero commercial invoices supplied.</li>
+            <li><strong>Control &amp; Governance Risk:</strong> Beneficial ownership changed twice in 12 months; new 22 year old sole director has no trading history.</li>
             <li><strong>Statutory Action:</strong> Escalate to MLRO and file NCA Suspicious Activity Report under POCA 2002 without tipping off.</li>
           </ul>
         `
@@ -80,22 +80,22 @@
             <div class="bg-[#efe6d5] p-3 border border-stone-400">
               <div class="font-hud text-xs text-[#a91d22]">1. PRICE &amp; VALUE</div>
               <p class="text-xs mt-1">Foreign payment fees split across 3 separate documents; total cost never shown upfront in one place.</p>
-              <span class="inline-block mt-2 text-[11px] font-hud bg-red-900 text-white px-2 py-0.5">FIX: ONE-PAGE FEE SUMMARY</span>
+              <span class="inline-block mt-2 text-[11px] font-hud bg-red-900 text-white px-2 py-0.5">FIX: ONE PAGE FEE SUMMARY</span>
             </div>
             <div class="bg-[#efe6d5] p-3 border border-stone-400">
               <div class="font-hud text-xs text-[#a91d22]">2. CONSUMER UNDERSTANDING</div>
               <p class="text-xs mt-1">Fraud warning buried on page 14 of terms; zero friction or warning displayed at the moment of payment.</p>
-              <span class="inline-block mt-2 text-[11px] font-hud bg-red-900 text-white px-2 py-0.5">FIX: IN-FLOW FRAUD PROMPT</span>
+              <span class="inline-block mt-2 text-[11px] font-hud bg-red-900 text-white px-2 py-0.5">FIX: IN FLOW FRAUD PROMPT</span>
             </div>
             <div class="bg-[#efe6d5] p-3 border border-stone-400">
               <div class="font-hud text-xs text-[#a91d22]">3. CONSUMER SUPPORT</div>
-              <p class="text-xs mt-1">Account-freeze process states no resolution timeline and provides no named contact route.</p>
+              <p class="text-xs mt-1">Account freeze process states no resolution timeline and provides no named contact route.</p>
               <span class="inline-block mt-2 text-[11px] font-hud bg-red-900 text-white px-2 py-0.5">FIX: PUBLISHED FREEZE SLA</span>
             </div>
             <div class="bg-[#efe6d5] p-3 border border-stone-400">
               <div class="font-hud text-xs text-[#a91d22]">4. PRODUCTS &amp; SERVICES</div>
               <p class="text-xs mt-1">No evidence that the customer journey was tested with customers in vulnerable circumstances.</p>
-              <span class="inline-block mt-2 text-[11px] font-hud bg-red-900 text-white px-2 py-0.5">FIX: PRE-LAUNCH VULNERABILITY TEST</span>
+              <span class="inline-block mt-2 text-[11px] font-hud bg-red-900 text-white px-2 py-0.5">FIX: PRE LAUNCH VULNERABILITY TEST</span>
             </div>
           </div>
         `
@@ -262,10 +262,10 @@
       const type = document.getElementById('inquiryType').value;
       const notes = document.getElementById('senderNotes').value.trim();
 
-      const subject = encodeURIComponent(`[Case File Inquiry: ${type}] — ${name}${org ? ' (' + org + ')' : ''}`);
+      const subject = encodeURIComponent(`[Case File Inquiry: ${type}]: ${name}${org ? ' (' + org + ')' : ''}`);
       const body = encodeURIComponent(`Hello Pooja,\n\n${notes}\n\nBest regards,\n${name}${org ? '\n' + org : ''}`);
       closeTipLineModal();
-      showToast(`DISPATCH LOGGED FOR ${name.toUpperCase()} — OPENING MAIL CLIENT`);
+      showToast(`DISPATCH LOGGED FOR ${name.toUpperCase()}, OPENING MAIL CLIENT`);
       window.location.href = `mailto:your@email.com?subject=${subject}&body=${body}`;
     }
 
